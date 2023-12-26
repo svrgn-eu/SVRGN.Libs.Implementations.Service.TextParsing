@@ -1,0 +1,48 @@
+name: Github-CI
+on:
+  push:
+    tags:
+      - v*
+    branches:
+      - main
+    paths:
+      - src/**
+      - .github/workflows/ci.yml
+  pull_request:
+    branches:
+    - main
+    paths:
+      - src/**
+      - .github/workflows/ci.yml
+jobs:
+  build:
+
+    env:
+      BUILD_CONFIG: 'Release'
+      SOLUTION: 'src/SVRGN.Libs.Implementations.Service.TextParsing.sln'
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.5
+
+    - name: Restore dependencies
+      run: nuget restore $SOLUTION
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.x.x
+
+    - name: Build
+      run: dotnet build $SOLUTION --configuration $BUILD_CONFIG --no-restore
+
+    - name: Run tests
+      run: dotnet test $SOLUTION /p:Configuration=$BUILD_CONFIG --no-restore --no-build --verbosity normal
+
+    - name: Publish
+      if: startsWith(github.ref, 'refs/tags/v')
+      run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET}}
