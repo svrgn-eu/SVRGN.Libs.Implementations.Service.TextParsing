@@ -4,7 +4,7 @@
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<LangVersion>latest</LangVersion>
-		<Version>1.0.0-alpha02</Version>
+		<Version>1.0.0-alpha04</Version>
 		<Authors>SVRGN.eu</Authors>
 		<Description>Base implementation for text parsing</Description>
 		<PackageReleaseNotes>Initial Release</PackageReleaseNotes>
@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="SVRGN.Libs.Contracts.Service.Logging" Version="1.0.0-alpha19" />
-    <PackageReference Include="SVRGN.Libs.Contracts.Service.TextParsing" Version="1.0.0-alpha02" />
+    <PackageReference Include="SVRGN.Libs.Contracts.Service.TextParsing" Version="1.0.0-alpha03" />
     <PackageReference Include="SVRGN.Libs.Extensions" Version="1.0.0-alpha02" />
   </ItemGroup>
 </Project>

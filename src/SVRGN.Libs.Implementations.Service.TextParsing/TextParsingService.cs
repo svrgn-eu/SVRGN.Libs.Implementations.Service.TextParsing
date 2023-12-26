@@ -1,5 +1,5 @@
 ﻿using SVRGN.Libs.Contracts.Service.Logging;
-using SVRGN.Libs.Contracts.TextParsing;
+using SVRGN.Libs.Contracts.Service.TextParsing;
 using SVRGN.Libs.Extensions;
 using System;
 using System.Collections.Generic;
