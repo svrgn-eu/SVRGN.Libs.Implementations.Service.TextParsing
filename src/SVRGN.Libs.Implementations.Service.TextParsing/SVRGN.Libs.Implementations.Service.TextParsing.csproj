@@ -4,7 +4,7 @@
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<LangVersion>latest</LangVersion>
-		<Version>1.0.0-alpha01</Version>
+		<Version>1.0.0-alpha02</Version>
 		<Authors>SVRGN.eu</Authors>
 		<Description>Base implementation for text parsing</Description>
 		<PackageReleaseNotes>Initial Release</PackageReleaseNotes>
