@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="SVRGN.Libs.Contracts.Service.Logging" Version="1.0.0-alpha19" />
+    <PackageReference Include="SVRGN.Libs.Contracts.Service.TextParsing" Version="1.0.0-alpha02" />
     <PackageReference Include="SVRGN.Libs.Extensions" Version="1.0.0-alpha02" />
-    <PackageReference Include="SVRGN.Libs.Contracts.TextParsing" Version="1.0.0-alpha02" />
   </ItemGroup>
 </Project>
