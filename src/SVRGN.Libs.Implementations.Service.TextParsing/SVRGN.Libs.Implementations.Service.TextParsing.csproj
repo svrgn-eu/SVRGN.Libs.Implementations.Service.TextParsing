@@ -1,15 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<LangVersion>latest</LangVersion>
 		<Version>1.0.0-alpha04</Version>
 		<Authors>SVRGN.eu</Authors>
+		<Copyright>2023 SVRGN.eu</Copyright>
 		<Description>Base implementation for text parsing</Description>
 		<PackageReleaseNotes>Initial Release</PackageReleaseNotes>
 		<PackageTags>Implementations;SVRGN;Content;Text;Text Parsing;Parsing;</PackageTags>
+		<PackageProjectUrl>https://SVRGN.eu</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+	
+	<ItemGroup>
+	  <None Include="..\..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="SVRGN.Libs.Contracts.Service.Logging" Version="1.0.0-alpha19" />
